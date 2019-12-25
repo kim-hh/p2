@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1280">
     <title>TAG HEUER</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,8 +14,17 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/function.js"></script>
-    <!--    <script src="js/submenu.js"></script>
-    <script src="js/slide_banner.js"></script>-->
+        <script src="js/submenu.js"></script>
+    <script src="js/slide_banner.js"></script>
+    <script>
+    $(function(){
+        $('.brand-visual a span').hover(function(){
+            $('.brand-visual a .arrow-line').stop().animate({width:'250px'},100);
+        },function(){
+            $('.brand-visual a .arrow-line').stop().animate({width:'200px'},100);
+        });
+    });
+    </script>
 </head>
 
 <body>
@@ -53,9 +62,9 @@
         <div class="visual">
             <div class="brand-visual">
                 <ul>
-                    <li class="visual01"><a href="#">RECORD YOUR ACTIVITY</a></li>
-                    <li class="visual02"><a href="#">CARRERA CALIBRE 16</a></li>
-                    <li class="visual03"><a href="#">작업중</a></li>
+                    <li class="visual01"><a href="#" class="center"><span class="blind">RECORD YOUR ACTIVITY</span><span class="more">READ MORE</span><span class="arrow-line"></span></a></li>
+                    <li class="visual02"><a href="#" class="center"><span class="blind">CARRERA CALIBRE 16</span><span class="more">READ MORE</span><span class="arrow-line"></span></a></li>
+                    <li class="visual03"><a href="#" class="center">작업중</a></li>
                 </ul>
             </div>
             <ul class="button-list">
@@ -239,15 +248,14 @@
     <input type="hidden" name="isForce" value="<?=$_POST['isForce']?>" class="input">
     <script>
         var mobile_keys = new Array('iPhone', 'iPod', 'Android', 'BlackBerry', 'Windows Phone', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson', 'Nokia');
-      
+
         if ($('.input').attr('value') == 'pc') mobile_keys = null;
-        
+
         for (i in mobile_keys) {
             if (navigator.userAgent.match(mobile_keys[i]) != null) {
                 location.href = "mo/index.html";
                 break;
             }
         }
-
     </script>
 </body></html>
