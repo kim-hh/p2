@@ -1,5 +1,5 @@
 $(function () {
-    $('.collection ul li, .news li, .sns li').hover(function () {
+    $('.collection ul li, .news li, .sns li, .gnb .sub2 li, .gnb .sub3 li').hover(function () {
         $(this).siblings().stop().fadeTo(500, 0.4);
     }, function () {
         $(this).siblings().stop().fadeTo(500, 1);
@@ -35,7 +35,15 @@ $(function () {
     //        $('body.collect .collection-list dt').css({color:'#940000'});
     //        $('body.collect .collection-list dd').css({color:'#000'});
     //    });
-
+    $('.brand-visual a span').hover(function() {
+                $('.brand-visual a .arrow-line').stop().animate({
+                    width: '250px'
+                }, 100);
+            }, function() {
+                $('.brand-visual a .arrow-line').stop().animate({
+                    width: '200px'
+                }, 100);
+            });
 
     $('body.detail .detail-info .small li').click(function (e) {
         var j = $(this).index();
@@ -68,12 +76,11 @@ $(function () {
     $('body.mobile footer .m-sitemap>li>a').click(function (e) {
         e.preventDefault();
         $('.m-sitemap li').find('ul').stop().slideUp();
-        $('.body.mobile footer .m-sitemap>li>a').removeClass('on');
+        $('body.mobile footer .m-sitemap>li>a').removeClass('on');
         if (!$(this).parent().find('ul').is(':hidden')) {
             $(this).addClass('on');
         }
         $(this).parent().find('ul').stop().slideToggle();
         $(this).toggleClass('on');
     });
-
 });

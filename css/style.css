@@ -16,18 +16,39 @@ header .logo {text-align: center;}
 header select {position: absolute; top: 20px; left: 0; width: 100px;}
 header fieldset {position: absolute; top: 20px; right: 0;border-bottom: 1px solid #fff; padding: 5px 0; box-sizing: border-box;}
 header fieldset input {background-color: transparent; color: #fff; height: 26px; font-family: "Noto Sans KR"; letter-spacing: 1px; font-size: 16px;}
-header .gnb {height: 50px; text-align: center;}
+header .gnb {height: 50px; text-align: center; background-color: #eee;}
 header .gnb::after {display: block; content: ""; clear: both;}
-header .gnb ul {padding-left: 140px; box-sizing: border-box;}
-header .gnb li {float: left; width: 150px; font-size: 20px; font-weight: bold; padding: 13px 25px;}
+header .gnb>ul {position: relative; padding-left: 140px; box-sizing: border-box;}
+header .gnb>ul>li {float: left; width: 150px; font-size: 20px; font-weight: bold; padding: 13px 25px; }
+header .gnb > ul > li > a::after {display: block; content: ""; width: 0px; height: 3px; background: #000; margin: 10px auto -15px; transition: all 0.5s;}
+header .gnb > ul > li:hover > a::after {width: 100%;}
+header .gnb .sub {position: absolute; overflow: hidden; top: 50px; left: 0; padding: 60px; width: 100%; z-index: 11; display: none;}
+header .gnb .sub {font-family: "Noto Sans KR"; font-weight: 300; font-size: 16px;}
+
+header .gnb .sub.sub1>ul> li{ float: left; width: 305px; margin-left: 20px;text-align: left; }
+header .gnb .sub.sub1>ul> li:first-child{margin-left: 0; }
+header .gnb .sub.sub1>ul> li>a {font-size: 18px; font-weight: normal;}
+header .gnb .sub.sub1 .subs {padding: 20px 0;}
+header .gnb .sub.sub1 .subs ul>li:first-child {}
+header .gnb .sub.sub1 .subs li{padding: 5px 0;}
+header .gnb .sub.sub1 .subs li a:hover {color: #b4122f;}
+header .gnb .sub.sub2 li{ float: left; width: 150px; margin-left: 20px;}
+header .gnb .sub.sub2 li:first-child{margin-left: 0;}
+header .gnb .sub.sub3 li{ float: left; width: 305px; margin-left: 20px;}
+header .gnb .sub.sub3 li:first-child{margin-left: 0;}
+header .gnb .sub.sub3 li span{padding-top: 10px;}
+header .gnb .sub li span {display: block; font-size: 16px;}
+.gnbbg {position: absolute; background-color: #fff; height: 400px;width: 100%; top: 130px; left: 0; z-index: 10; display: none; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
 
 .visual {position: relative; height: 700px; overflow: hidden; min-width: 1280px;}
 .brand-visual li {position: absolute; top: 0; width: 100%; background-position: center top;}
 .brand-visual li a{padding: 450px 0 0 150px; background-position: center top; box-sizing: border-box;color: #fff; font-size: 30px; letter-spacing: 2px; }
 .brand-visual li:nth-child(1) a{background-image: url(../images/banner_main_01.jpg); }
 .brand-visual li:nth-child(2) a{background-image: url(../images/banner_main_02.jpg); color: #000;}
+.brand-visual li:nth-child(3) a{background-image: url(../images/banner_main_03.jpg); color: #848484; padding: 450px 0 0 30px;}
 .brand-visual li a .arrow-line {display: block; border-bottom: 5px solid #fff; border-right: 15px solid transparent; height: 0; width: 200px;}
 .brand-visual li:nth-child(2) a .arrow-line {border-bottom: 5px solid #000;}
+.brand-visual li:nth-child(3) a .arrow-line {border-bottom: 5px solid #848484;}
 .brand-visual a {display: block; height: 700px;}
 .brand-visual li:nth-child(1) {left: 0; background-image: url(../images/banner_main_01.jpg);}
 .brand-visual li:nth-child(2) {left: 100%; background-image: url(../images/banner_main_02.jpg);}
@@ -266,7 +287,7 @@ body.brand .partner ul li:nth-child(5) a{left: 780px; background-image: url(../i
 body.brand .partner ul li:nth-child(6) a{left: 975px; background-image: url(../images/img_partner_06.jpg);}
 body.brand .partner p {text-align: center;}
 
-@charset "utf-8";
+body.prepare .open {background-image: url(../images/img_prepare.gif); background-repeat: no-repeat; height: 800px; background-position: center top; min-width: 1280px;}
 
 /*모바일 코딩*/
 body.mobile {font-family: "Noto Sans KR";}
@@ -283,6 +304,7 @@ body.mobile .brand-visual li {position: absolute; top: 0; width: 100%; backgroun
 body.mobile .brand-visual a {display: block; height: 150vw;background-size: 100%; }
 body.mobile .brand-visual .visual01 a{left: 0; background-image: url(../images/m_banner_main_01.jpg);}
 body.mobile .brand-visual .visual02 a{left: 100%; background-image: url(../images/m_banner_main_02.jpg);}
+body.mobile .brand-visual .visual03 a{left: 200%; background-image: url(../images/m_banner_main_03.jpg);}
 
 
 body.mobile .m-collection {background-color: #191919;}
