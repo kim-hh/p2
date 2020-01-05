@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* index.html start */
+
 .center {width: 1280px; margin: 0 auto;}
 
 .btn {display: inline-block; padding: 10px 20px; font-size: 14px; color: #fff; letter-spacing: 2px;}
@@ -13,16 +14,17 @@
 header .header-inner {background-color: #000;}
 header .center {position: relative;}
 header .logo {text-align: center;}
-header select {position: absolute; top: 20px; left: 0; width: 100px;}
-header fieldset {position: absolute; top: 20px; right: 0;border-bottom: 1px solid #fff; padding: 5px 0; box-sizing: border-box;}
-header fieldset input {background-color: transparent; color: #fff; height: 26px; font-family: "Noto Sans KR"; letter-spacing: 1px; font-size: 16px;}
+header select {position: absolute; top: 20px; left: 0; width: 100px; background-color: #000; color: #fff; padding: 10px 0; font-family: "Noto Sans KR";}
+header select option {height: 500px;}
+header select~fieldset {position: absolute; top: 20px; right: 0;border-bottom: 1px solid #fff; padding: 5px 0; box-sizing: border-box;}
+header select~fieldset input {background-color: transparent; color: #fff; height: 26px; font-family: "Noto Sans KR"; letter-spacing: 1px; font-size: 16px;}
 header .gnb {height: 50px; text-align: center; background-color: #eee;}
 header .gnb::after {display: block; content: ""; clear: both;}
-header .gnb>ul {position: relative; padding-left: 140px; box-sizing: border-box;}
+header .gnb>ul {position: relative; padding-left: 140px; box-sizing: border-box; font-family: "Nexa Light";}
 header .gnb>ul>li {float: left; width: 150px; font-size: 20px; font-weight: bold; padding: 13px 25px; }
 header .gnb > ul > li > a::after {display: block; content: ""; width: 0px; height: 3px; background: #000; margin: 10px auto -15px; transition: all 0.5s;}
 header .gnb > ul > li:hover > a::after {width: 100%;}
-header .gnb .sub {position: absolute; overflow: hidden; top: 50px; left: 0; padding: 60px; width: 100%; z-index: 11; display: none;}
+header .gnb .sub {position: absolute; overflow: hidden; top: 50px; left: 0; padding: 60px 0; width: 100%; z-index: 11; display: none;}
 header .gnb .sub {font-family: "Noto Sans KR"; font-weight: 300; font-size: 16px;}
 
 header .gnb .sub.sub1>ul> li{ float: left; width: 305px; margin-left: 20px;text-align: left; }
@@ -32,7 +34,7 @@ header .gnb .sub.sub1 .subs {padding: 20px 0;}
 header .gnb .sub.sub1 .subs ul>li:first-child {}
 header .gnb .sub.sub1 .subs li{padding: 5px 0;}
 header .gnb .sub.sub1 .subs li a:hover {color: #b4122f;}
-header .gnb .sub.sub2 li{ float: left; width: 150px; margin-left: 20px;}
+header .gnb .sub.sub2 li{ float: left; width: 160px; margin-left: 20px;}
 header .gnb .sub.sub2 li:first-child{margin-left: 0;}
 header .gnb .sub.sub3 li{ float: left; width: 305px; margin-left: 20px;}
 header .gnb .sub.sub3 li:first-child{margin-left: 0;}
@@ -40,23 +42,20 @@ header .gnb .sub.sub3 li span{padding-top: 10px;}
 header .gnb .sub li span {display: block; font-size: 16px;}
 .gnbbg {position: absolute; background-color: #fff; height: 400px;width: 100%; top: 130px; left: 0; z-index: 10; display: none; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
 
-.visual {position: relative; height: 700px; overflow: hidden; min-width: 1280px;}
-.brand-visual li {position: absolute; top: 0; width: 100%; background-position: center top;}
-.brand-visual li a{padding: 450px 0 0 150px; background-position: center top; box-sizing: border-box;color: #fff; font-size: 30px; letter-spacing: 2px; }
-.brand-visual li:nth-child(1) a{background-image: url(../images/banner_main_01.jpg); }
-.brand-visual li:nth-child(2) a{background-image: url(../images/banner_main_02.jpg); color: #000;}
-.brand-visual li:nth-child(3) a{background-image: url(../images/banner_main_03.jpg); color: #848484; padding: 450px 0 0 30px;}
-.brand-visual li a .arrow-line {display: block; border-bottom: 5px solid #fff; border-right: 15px solid transparent; height: 0; width: 200px;}
-.brand-visual li:nth-child(2) a .arrow-line {border-bottom: 5px solid #000;}
-.brand-visual li:nth-child(3) a .arrow-line {border-bottom: 5px solid #848484;}
-.brand-visual a {display: block; height: 700px;}
-.brand-visual li:nth-child(1) {left: 0; background-image: url(../images/banner_main_01.jpg);}
-.brand-visual li:nth-child(2) {left: 100%; background-image: url(../images/banner_main_02.jpg);}
-.brand-visual li:nth-child(3) {left: 200%; background-image: url(../images/banner_main_03.jpg);}
-.button-list {position: absolute; overflow: hidden; bottom: 30px; left: 50%; margin-left: -96px;}
-.button-list li {float: left; width: 50px; height: 7px; margin: 0 7px; background-color: #fff; text-indent: -100px; overflow: hidden; cursor: pointer;}
-/*.button-list li.on {background-position: 0 0;}*/
-.button-list li.on {background-color: #000;}
+
+.visual {position: relative; height: 700px;  min-width: 1280px;}
+.visual li {position: absolute; height: 700px; top: 0; width: 100%; background-position: center top;}
+.visual li a{padding: 450px 0 0 150px; background-position: center top; box-sizing: border-box; font-size: 30px; letter-spacing: 2px; }
+.visual .visual01 a{background-image: url(../images/banner_main_01.jpg); color: #fff;}
+.visual .visual02 a{background-image: url(../images/banner_main_02.jpg); color: #000;}
+.visual .visual03 a{background-image: url(../images/banner_main_03.jpg); color: #848484; padding: 450px 0 0 30px;}
+.visual li a .arrow-line {display: block; border-bottom: 5px solid #fff; border-right: 15px solid transparent; height: 0; width: 200px;}
+.visual .visual02 a .arrow-line {border-bottom: 5px solid #000;}
+.visual .visual03 a .arrow-line {border-bottom: 5px solid #848484;}
+.visual a {display: block; height: 700px;}
+.visual .visual01 {background-image: url(../images/banner_main_01.jpg);}
+.visual .visual02 {background-image: url(../images/banner_main_02.jpg);}
+.visual .visual03 {background-image: url(../images/banner_main_03.jpg);}
 
 .collection {position: relative;}
 .collection h3 {text-align: center; padding: 100px 0 70px;}
@@ -91,7 +90,7 @@ header .gnb .sub li span {display: block; font-size: 16px;}
 */
 .collection p {text-align: center; margin: 70px 0 100px;}
 
-.bar-banner-01 {display: block; background-image: url(../images/banner_bar_01.jpg); height: 550px; background-position: center top; min-width: 1280px;}
+
 
 .today h3 {text-align: center; padding: 100px 0 70px;}
 .todays {overflow: hidden;}
@@ -106,7 +105,8 @@ header .gnb .sub li span {display: block; font-size: 16px;}
 .today .left li:nth-child(5) {background-image: url(../images/img_today_04.jpg); width: 400px; height: 180px; margin-top: 40px; text-indent: -500px; overflow: hidden;}
 .today .right {float: right; background-image: url(../images/img_today_05.jpg); width: 620px; height: 620px; text-indent: -500px; overflow: hidden;}
 
-.bar-banner-02 {display: block; background-image: url(../images/banner_bar_02.jpg); height: 500px; background-position: center top; min-width: 1280px; margin: 100px 0;}
+.bar-banner-01 {display: block; background-image: url(../images/banner_bar_02.jpg); height: 500px; background-position: center top; min-width: 1280px;}
+.bar-banner-02 {display: block; background-image: url(../images/banner_bar_01.jpg); height: 550px; background-position: center top; min-width: 1280px; margin: 100px 0;}
 
 .newsbg {width: 100%; height: 760px; background-color: #eee;}
 .news h3 {text-align: center; padding: 40px 0;}
@@ -257,7 +257,7 @@ body.brand .company {overflow: hidden;}
 body.brand .company h3 {text-align: center; padding: 100px 0 70px;}
 body.brand .company p {width: 620px; height: 660px; float: left; box-sizing: border-box; font-family: "Noto Sans KR"; font-size: 22px;}
 body.brand .company p:nth-of-type(even) {margin-left: 40px;}
-body.brand .company p:nth-of-type(2), body.brand .company p:nth-of-type(3) { padding: 100px 40px;}
+body.brand .company p:nth-of-type(2), body.brand .company p:nth-of-type(3) { padding: 100px 40px; line-height: 2;}
 body.brand .company p:nth-of-type(1) {background-image: url(../images/img_company_01.jpg); padding: 520px 50px 0; background-repeat: no-repeat; background-color: #eee;}
 body.brand .company p:nth-of-type(3) {margin-top: 100px;}
 body.brand .company p:nth-of-type(4) {background-image: url(../images/img_company_02.gif); padding: 520px 50px 0; background-repeat: no-repeat; margin-top: 100px; background-color: #eee;}
@@ -275,7 +275,7 @@ body.brand .knowhow ul li dd {padding: 20px; font-size: 20px;}
 body.brand .knowhow ul li p {text-align: center;}
 
 body.brand .partner h3 {text-align: center; padding-top: 30px;}
-
+body.brand .partner .partnerbg{background-color: }
 body.brand .partner ul {position: relative; width: 1280px; height: 400px; margin: 100px auto;}
 body.brand .partner ul li {position: absolute; top: 0; transform: skew(15deg);}
 body.brand .partner ul li a {position: absolute; display: block; width: 195px; height: 400px; background-position: center; text-indent: -2000px; overflow: hidden;}
@@ -285,26 +285,55 @@ body.brand .partner ul li:nth-child(3) a{left: 390px; background-image: url(../i
 body.brand .partner ul li:nth-child(4) a{left: 585px; background-image: url(../images/img_partner_04.jpg);}
 body.brand .partner ul li:nth-child(5) a{left: 780px; background-image: url(../images/img_partner_05.jpg);}
 body.brand .partner ul li:nth-child(6) a{left: 975px; background-image: url(../images/img_partner_06.jpg);}
-body.brand .partner p {text-align: center;}
+body.brand .partner p {text-align: center; margin-bottom: 100px;}
 
 body.prepare .open {background-image: url(../images/img_prepare.gif); background-repeat: no-repeat; height: 800px; background-position: center top; min-width: 1280px;}
 
-/*모바일 코딩*/
-body.mobile {font-family: "Noto Sans KR";}
+/*모바일 코딩 start*/
+/* html ,body {position: relative; overflow-y: auto; height: 100%; width: 100%; overflow: hidden;}*/
+/*body.mobile {font-family: "Noto Sans KR";}*/
+.ony {overflow-y: hidden;}
 body.mobile img {width: 100%;}
-body.mobile .m-logo {padding: 8vw 0; text-align: center;}
-body.mobile header {position: relative; background-color: #000;}
-body.mobile header .m-logo img {width: 13.9%;}
-body.mobile header .m-gnb, body.mobile header .m-util{position: absolute; top: 10vw; width: 8%;}
-body.mobile header .m-gnb {left: 4%;}
-body.mobile header .m-util {right: 4%;}
+body.mobile .m-logo {padding: 3vw 0; text-align: center;}
+/*body.mobile header {background-color: #000;}*/
+body.mobile header .top {position: fixed; width: 100%;  top: 0; left: 0; background-color: #000; z-index: 50; height: 18vw;}
+body.mobile header .top .m-logo img {width: 13.9%;}
+/*body.mobile header .top .m-menu-btn {position: absolute; top: 5vw; left: 5%; background-image: url(../images/m_menubar.gif); background-size: 100%; width: 8%; height: 8vw;  transition: all .4s; }*/
 
-body.mobile .m-visual {position: relative; height: 150vw; overflow: hidden; min-width: inherit;}
-body.mobile .brand-visual li {position: absolute; top: 0; width: 100%; background-position: center top; text-indent: -2000px; overflow: hidden;}
-body.mobile .brand-visual a {display: block; height: 150vw;background-size: 100%; }
-body.mobile .brand-visual .visual01 a{left: 0; background-image: url(../images/m_banner_main_01.jpg);}
-body.mobile .brand-visual .visual02 a{left: 100%; background-image: url(../images/m_banner_main_02.jpg);}
-body.mobile .brand-visual .visual03 a{left: 200%; background-image: url(../images/m_banner_main_03.jpg);}
+/*모바일 메뉴버튼 클릭 애니메이션 20191228*/
+body.mobile header .top .m-menu-btn {position: absolute; top: 5vw; left: 5%; width: 8%; height: 8vw;  transition: all .4s; cursor: pointer;}
+body.mobile header .top .m-menu-btn span {position: absolute; display: block; top: 50%; width: 100%;  transform: translate(0,50%); height: 0.5vw; background: rgb(255, 255, 255, 1); border-radius: 1vw; transition: .5s;}
+body.mobile header .top .m-menu-btn span:before,
+body.mobile header .top .m-menu-btn span:after {position: absolute; content: ""; top: 0; left: 0; width: 85%; height:0.5vw; background: rgb(255, 255, 255, 1); border-radius: 1vw; transition: .5s;}
+body.mobile header .top .m-menu-btn span:before {top: -3vw;}
+body.mobile header .top .m-menu-btn span:after {top: 3vw; width: 60%;}
+body.mobile header .top .m-menu-btn.on span {background: rgb(255, 255, 255, 0);}
+body.mobile header .top .m-menu-btn.on span:before {top: 0;  transform: rotate(45deg); width: 100%;}
+body.mobile header .top .m-menu-btn.on span:after {top: 0; transform: rotate(-45deg); width: 100%;}
+/*모바일 메뉴버튼 클릭 애니메이션 종료*/
+
+/* 모바일 메뉴 20191228*/
+body.mobile header .m-menu {position: fixed;  top: 18vw; right: 0; height: 100%; width: 100%;  overflow-y: auto;  z-index: 10000; box-sizing: border-box; display: none; background-color: rgba(0, 0, 0, 0.95);}
+/*body.mobile header .m-menu .m-gnb {overflow: hidden; }*/
+body.mobile header .m-menu a {display: block; font-size: 3.5vw; color: #fff;}
+
+body.mobile header .m-menu .m-gnb li {line-height: 15vw;}
+body.mobile header .m-menu .m-gnb>ul>li>a {background-image: url(../images/m_arrow_right.gif); background-repeat: no-repeat; background-position: 95% 50%; background-size: 2%; text-indent: 10%; border-bottom: 1px solid #888; font-family: "Nexa-Bold"}
+body.mobile header .m-menu .m-gnb>ul>li:first-child>a {border-top: 1px solid #888;}
+
+body.mobile header .m-menu .m-gnb .sub {position: absolute; width: 100%; height: 100%;top: 0;  z-index: 40; right: -100%; background-color: #000; display: none;}
+body.mobile header .m-menu .m-gnb .sub a {text-indent: 10%; border-bottom: 1px solid #888;}
+body.mobile header .m-menu .m-gnb .sub ul {display: block;}
+body.mobile header .m-menu .m-gnb .sub>div>a {border-top: 1px solid #888;); background-image: url(../images/m_arrow_left.gif); background-repeat: no-repeat; background-position: 10% 50%; background-size: 2%; font-family: "Nexa-Bold";}
+body.mobile header .m-menu .m-gnb .sub>div {background-image: linear-gradient(to right, #000, #333, #000); text-align: center;}
+/* 모바일 메뉴 종료*/
+
+body.mobile .m-visual {position: relative; height: 150vw; overflow: hidden; margin-top: 10vw; }
+body.mobile .m-visual li {position: absolute; top: 0; width: 100%; background-position: center top; text-indent: -2000px; overflow: hidden;}
+body.mobile .m-visual a {display: block; height: 150vw;}
+body.mobile .visual01 a{background-image: url(../images/m_banner_main_01.jpg); background-size: 100%; }
+body.mobile .visual02 a{background-image: url(../images/m_banner_main_02.jpg); background-size: 100%; }
+body.mobile .visual03 a{background-image: url(../images/m_banner_main_03.jpg); background-size: 100%; }
 
 
 body.mobile .m-collection {background-color: #191919;}
@@ -322,7 +351,6 @@ body.mobile .m-today h3 {padding: 10vw 0 15vw; text-align: center;}
 body.mobile .m-today h3 img {width: 44%;}
 body.mobile .m-today .todays ul {overflow: hidden;}
 body.mobile .m-today .todays li {float: left; width: 44%; height: 44vw; margin: 0 4% 4vw; background-size: 100%;}
-body.mobile .m-today .todays li:last-child {width: 92%;}
 body.mobile .m-today .todays li:nth-child(odd) {margin-right: 0;}
 body.mobile .m-today .todays li:nth-child(1) {background-color: #eee; text-align: center; font-size: 4vw; font-family: "Nexa"; padding-top: 7vw; box-sizing: border-box;}
 body.mobile .m-today .todays li:nth-child(1) p {text-align: center; padding-top: 6vw;}
@@ -330,9 +358,8 @@ body.mobile .m-today .todays li:nth-child(1) p a {padding: 4vw 8%; background-co
 body.mobile .m-today .todays li:nth-child(2) {background-image: url(../images/m_img_today_01.jpg); text-indent: -100%; overflow: hidden;}
 body.mobile .m-today .todays li:nth-child(3) {background-image: url(../images/m_img_today_02.jpg); text-indent: -100%; overflow: hidden;}
 body.mobile .m-today .todays li:nth-child(4) {background-image: url(../images/m_img_today_03.jpg); text-indent: -100%; overflow: hidden;}
-body.mobile .m-today .todays li:nth-child(5) {background-image: url(../images/m_img_today_04.jpg); text-indent: -100%; overflow: hidden;}
 
-body.mobile .m-news {background-color: #191919;}
+body.mobile .m-news {background-color: #191919; font-family: "Noto Sans KR";}
 body.mobile .m-news h3 {padding: 10vw 0 4vw; text-align: center;}
 body.mobile .m-news h3 img {width: 44%;}
 body.mobile .m-news ul {overflow: hidden;}
@@ -357,20 +384,20 @@ body.mobile .m-sns li:nth-child(4) {background-image: url(../images/m_img_insta_
 body.mobile .m-sns li:nth-child(5) {background-image: url(../images/m_img_insta_03.jpg);}
 */
 
-body.mobile .m-store {background-image: url(../images/m_img_store_bg.jpg); background-size: 100%; height: 65vw;}
-body.mobile .m-store p {text-align: center; padding-top: 35vw;}
-body.mobile .m-store p .btn-mobile {padding: 4vw 8%; background-color: #fff; color: #000; font-size: 4vw; font-family: "Nexa";}
+body.mobile .m-store {background-image: url(../images/m_img_store_bg.jpg); background-size: 100%; height: 45vw;}
+body.mobile .m-store p {text-align: center; padding-top: 30vw;}
+body.mobile .m-store p .btn-mobile {padding: 3vw 6%; background-color: #fff; color: #000; font-size: 3vw; font-family: "Nexa";}
 body.mobile footer {background-image: none; background-color: #000; color: #fff;}
-body.mobile footer a {display: block; color: #fff; font-size: 5vw; padding-left: 10%}
+body.mobile footer a {display: block; color: #fff; font-size: 3.5vw; padding-left: 10%}
 body.mobile footer .m-sitemap {font-family: "Nexa-Bold";}
 body.mobile footer .m-sitemap > li {line-height: 15vw; }
 body.mobile footer .m-sitemap > li > a {background-image: url(../images/m_footer_arrow_down.jpg); background-size: 5%;  background-repeat: no-repeat; background-position: 95% 50%;}
 body.mobile footer .m-sitemap > li > a.on {background-image: url(../images/m_footer_arrow_up.gif);}
 body.mobile footer .m-sitemap ul {display: none; font-family: "Nexa";}
-body.mobile footer .m-sitemap ul a {background-color: #333; font-size: 4vw; text-indent: 4%;}
+body.mobile footer .m-sitemap ul a {background-color: #333; text-indent: 6%;}
 
-body.mobile footer .footer-bottom {background-color: #191919; text-align: center; padding: 6vw 4%;}
-body.mobile footer .footer-bottom~p {text-align: center;}
-body.mobile footer .footer-bottom~p a {font-size: 3.5vw; background-color: #fff; color: #000; padding: 4vw 0;}
+body.mobile footer .footer-bottom {background-color: #191919; text-align: center; padding: 6vw 4%; font-size: 3vw;}
+body.mobile footer .footer-bottom~p {text-align: center; font-family: "Noto Sans KR";}
+body.mobile footer .footer-bottom~p a {font-size: 3vw; background-color: #fff; color: #000; padding: 4vw 0;}
 
 

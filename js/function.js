@@ -1,4 +1,18 @@
 $(function () {
+    /* 메인페이지 배너 bxslider*/
+    $('.visual ul').bxSlider({
+        auto: true,
+        pager: true,
+        touchEnabled : (navigator.maxTouchPoints > 0)
+    });
+    $('.m-visual ul').bxSlider({
+        auto: true,
+        pager: true,
+        touchEnabled : (navigator.maxTouchPoints > 0)
+    });
+    /* 메인페이지 배너 bxslider 종*/
+    
+    /* */
     $('.collection ul li, .news li, .sns li, .gnb .sub2 li, .gnb .sub3 li').hover(function () {
         $(this).siblings().stop().fadeTo(500, 0.4);
     }, function () {
@@ -20,8 +34,8 @@ $(function () {
         slidesToShow: 3
     });
     $('.m-sns ul').slick({
-        slidesToShow: 1,  
-  variableWidth: true
+        slidesToShow: 1,
+        variableWidth: true
     });
     //    $(' body.collect .collection-list').hover(function () {
     //        $(this).css({backgroundColor:'#940000'});
@@ -35,15 +49,15 @@ $(function () {
     //        $('body.collect .collection-list dt').css({color:'#940000'});
     //        $('body.collect .collection-list dd').css({color:'#000'});
     //    });
-    $('.brand-visual a span').hover(function() {
-                $('.brand-visual a .arrow-line').stop().animate({
-                    width: '250px'
-                }, 100);
-            }, function() {
-                $('.brand-visual a .arrow-line').stop().animate({
-                    width: '200px'
-                }, 100);
-            });
+    $('.visual a span').hover(function () {
+        $('.visual a .arrow-line').stop().animate({
+            width: '250px'
+        }, 100);
+    }, function () {
+        $('.visual a .arrow-line').stop().animate({
+            width: '200px'
+        }, 100);
+    });
 
     $('body.detail .detail-info .small li').click(function (e) {
         var j = $(this).index();

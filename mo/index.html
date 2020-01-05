@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -11,42 +12,82 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/slick.css">
     <link rel="stylesheet" href="../css/slick-theme.css">
-
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
 
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/function.js"></script>
-        <script src="../js/submenu.js"></script>
-    <script src="../js/slide_banner.js"></script>
+    <script src="../js/submenu.js"></script>
+    <script src="../js/jquery.bxslider.min.js"></script>
 </head>
 
 <body class="mobile">
     <p class="skip-navi blind"><a href="#container">본문내용 바로가기</a></p>
     <div class="wrap">
         <header>
-            <h1 class="m-logo"><a href="#"><img src="../images/m_toplogo.jpg" alt="TAGHEUER"></a></h1>
-
-
+            <div class="top">
+                <h1 class="m-logo"><a href="index.html"><img src="../images/m_toplogo.jpg" alt="TAGHEUER"></a></h1>
+                <div class="m-menu-btn"><span></span></div>
+            </div>
             <h2 class="blind">메뉴</h2>
-            <nav class="m-gnb">
-                <a href="#"><img src="../images/m_menubar.gif" alt="메뉴"></a>
-            </nav>
-            <nav class="m-util">
-                <a href="#"><img src="../images/m_search.gif" alt="검색"></a>
-            </nav>
+            <div class="m-menu">
+                <nav class="m-gnb">
+                    <ul>
+                        <li><a href="#">WATCH</a>
+                            <div class="sub">
+                                <div><a href="#">WATCH</a></div>
+                                <ul style="display: block;">
+                                    <li><a href="javascript:;">남성 시계</a></li>
+                                    <li><a href="javascript:;">여성 시계</a></li>
+                                    <li><a href="javascript:;">명품 스포츠 시계</a></li>
+                                    <li><a href="javascript:;">다이빙 시계</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;">COLLECTION</a>
+                            <div class="sub">
+                                <div><a href="javascript:;">COLLECTION</a></div>
+                                <ul>
+                                    <li><a href="javascript:;">태그호이어 까레라</a></li>
+                                    <li><a href="javascript:;">태그호이어 아쿠아레이서</a></li>
+                                    <li><a href="javascript:;">태그호이어 링크</a></li>
+                                    <li><a href="javascript:;">태그호이어 포뮬러 1</a></li>
+                                    <li><a href="javascript:;">태그호이어 헤리티지</a></li>
+                                    <li><a href="javascript:;">태그호이어 모나코</a></li>
+                                    <li><a href="javascript:;">태그호이어 커넥티드 모듈러</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;">BRAND</a>
+                            <div class="sub">
+                                <div><a href="javascript:;">BRAND</a></div>
+                                <ul>
+                                    <li><a href="javascript:;">태그호이어 소개</a></li>
+                                    <li><a href="javascript:;">태그호이어의 역사</a></li>
+                                    <li><a href="javascript:;">태그호이어의 노하우</a></li>
+                                    <li><a href="javascript:;">문의하기</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;">NEWS</a>
+                            <div class="sub">
+                                <div><a href="javascript:;">NEWS</a></div>
+                                <ul>
+                                    <li><a href="javascript:;">최신 뉴스 보기</a></li>
+                                    <li><a href="javascript:;">지난 뉴스 보기</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;">STORE</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <div class="m-visual">
-            <div class="brand-visual">
-                <ul>
-                    <li class="visual01"><a href="#">RECORD YOUR ACTIVITY</a></li>
-                    <li class="visual02"><a href="#">CARRERA CALIBRE 16</a></li>
-                    <li class="visual03"><a href="#">작업중</a></li>
-                </ul>
-            </div>
-            <ul class="button-list">
-                <li class="on">1번</li>
-                <li>2번</li>
-                <li>3번</li>
+            <ul>
+                <li class="visual01"><a href="#">RECORD YOUR ACTIVITY</a></li>
+                <li class="visual02"><a href="#">CARRERA CALIBRE 16</a></li>
+                <li class="visual03"><a href="#">TAG HEUER LINK - avant-garde design and eternal elegance(아방가르드한 디자인의 우아한 시계)</a></li>
             </ul>
         </div>
         <div id="container">
@@ -68,10 +109,9 @@
                     <ul>
                         <li>TAG HEUER<br>Connected Modular<br>45 Luxury Kit<p><a href="#" class="btn-mobile">SHOP NOW</a></p>
                         </li>
-                        <li><a href="#">사진1</a></li>
+                        <li>사진1</li>
                         <li>사진2</li>
                         <li>사진3</li>
-                        <li>사진4</li>
                     </ul>
                 </div>
             </div>
@@ -98,26 +138,7 @@
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="#"><img src="../images/m_img_news_03.jpg" alt="대담한 의지로 스위스 전역을 넘나드는 데어데블 카이 레니">
-                            <div class="news-content">
-                                <dl>
-                                    <dt>대담한 의지로 스위스 전역을 넘나드는 데어데블 카이 레니</dt>
-                                    <dd>파도를 지배하는 놀라운 재능으로 스탠딩 패들부문에서 7차례나 우승 트로피를 거머쥔 태그호이어 홍보대사 겸 스탠드업 패들 세계챔피언, 카이 레니가 마침내 스위스를 방문합니다.</dd>
-                                </dl>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../images/m_img_news_04.jpg" alt="태그호이어 모나코 50주년 기념">
-                            <div class="news-content">
-                                <dl>
-                                    <dt>태그호이어 모나코 50주년 기념</dt>
-                                    <dd>출시된 지 50년이 지난 이 아이코닉 모델은 2019년 한해에 걸쳐 다양한 이벤트와 함께 기념되었으며, 새로운 모나코 리미티드 에디션 모델이 이벤트에서 새롭게 선보입니다.</dd>
-                                </dl>
-                            </div>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
             <div class="m-sns">
@@ -198,17 +219,20 @@
                 <address>
                     이 사이트는 포트폴리오 용으로 만들어진 가상 사이트입니다. 사이트에 사용된 사진과 내용의 저작권은 TAG HEUER에 있습니다.<br>Copyright &copy; 2020 김현호. All rights reserved
                 </address>
-                
             </div>
             <p><a href="javascript:goPC();">PC버전으로 보기</a></p>
         </footer>
     </div>
     <form id="goPCFrm" method="post" action="../index.html">
-		<input type="hidden" name="isForce" value="pc" />
-	</form>
+        <input type="hidden" name="isForce" value="pc" />
+    </form>
 
-<script type="text/javascript">
-	function goPC() {$("#goPCFrm").submit();
-	}
-</script>
-</body></html>
+    <script type="text/javascript">
+        function goPC() {
+            $("#goPCFrm").submit();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -34,9 +34,7 @@ $(function(){
                 n = 0;
             }
             button.eq(n).trigger('click');
-        }, 3000);
-     console.log(setIntervalId);
-        
+        }, 3000);        
     }
     
     function move(i){
