@@ -47,12 +47,12 @@ header .gnb .sub li span {display: block; font-size: 16px;}
 .visual {position: relative; height: 700px;  min-width: 1280px;}
 .visual li {position: absolute; height: 700px; top: 0; width: 100%; background-position: center top;}
 .visual li a{padding: 450px 0 0 150px; background-position: center top; box-sizing: border-box; font-size: 30px; letter-spacing: 2px; }
-.visual .visual01 a{background-image: url(../images/banner_main_01.jpg); color: #848484; padding: 450px 0 0 30px;}
+.visual .visual01 a{background-image: url(../images/banner_main_01.jpg); color: #fff;}
 .visual .visual02 a{background-image: url(../images/banner_main_02.jpg); color: #000;}
-.visual .visual03 a{background-image: url(../images/banner_main_03.jpg); color: #fff; padding: 500px 0 0 100px; }
-.visual li a .arrow-line {display: block; border-bottom: 5px solid #848484; border-right: 15px solid transparent; height: 0; width: 200px;}
+.visual .visual03 a{background-image: url(../images/banner_main_03.jpg); color: #848484; padding: 450px 0 0 30px;}
+.visual li a .arrow-line {display: block; border-bottom: 5px solid #fff; border-right: 15px solid transparent; height: 0; width: 200px;}
 .visual .visual02 a .arrow-line {border-bottom: 5px solid #000;}
-.visual .visual03 a .arrow-line {border-bottom: 5px solid #fff;}
+.visual .visual03 a .arrow-line {border-bottom: 5px solid #848484;}
 .visual a {display: block; height: 700px;}
 .visual .visual01 {background-image: url(../images/banner_main_01.jpg);}
 .visual .visual02 {background-image: url(../images/banner_main_02.jpg);}
