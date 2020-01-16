@@ -11,6 +11,7 @@
 .btn-black:hover {background-color: #fff; color: #000; border: 1px solid #000; transition: background .5s;}
 .btn-red:hover {background-color: #fff; color: #bb1e1e; border: 1px solid #bb1e1e; transition: background .5s;}
 
+header::after {display: block; content: ""; clear: both;}
 header .header-inner {background-color: #000;}
 header .center {position: relative;}
 header .logo {text-align: center;}
@@ -46,12 +47,12 @@ header .gnb .sub li span {display: block; font-size: 16px;}
 .visual {position: relative; height: 700px;  min-width: 1280px;}
 .visual li {position: absolute; height: 700px; top: 0; width: 100%; background-position: center top;}
 .visual li a{padding: 450px 0 0 150px; background-position: center top; box-sizing: border-box; font-size: 30px; letter-spacing: 2px; }
-.visual .visual01 a{background-image: url(../images/banner_main_01.jpg); color: #fff;}
+.visual .visual01 a{background-image: url(../images/banner_main_01.jpg); color: #848484; padding: 450px 0 0 30px;}
 .visual .visual02 a{background-image: url(../images/banner_main_02.jpg); color: #000;}
-.visual .visual03 a{background-image: url(../images/banner_main_03.jpg); color: #848484; padding: 450px 0 0 30px;}
-.visual li a .arrow-line {display: block; border-bottom: 5px solid #fff; border-right: 15px solid transparent; height: 0; width: 200px;}
+.visual .visual03 a{background-image: url(../images/banner_main_03.jpg); color: #fff; padding: 500px 0 0 100px; }
+.visual li a .arrow-line {display: block; border-bottom: 5px solid #848484; border-right: 15px solid transparent; height: 0; width: 200px;}
 .visual .visual02 a .arrow-line {border-bottom: 5px solid #000;}
-.visual .visual03 a .arrow-line {border-bottom: 5px solid #848484;}
+.visual .visual03 a .arrow-line {border-bottom: 5px solid #fff;}
 .visual a {display: block; height: 700px;}
 .visual .visual01 {background-image: url(../images/banner_main_01.jpg);}
 .visual .visual02 {background-image: url(../images/banner_main_02.jpg);}
@@ -161,10 +162,16 @@ footer .footer-bottom {background-color: #505050; font-family: "Noto Sans KR"; c
 /*detail(sub1) page start*/
 body.detail .detail-info {overflow: hidden; background-color: #eee;}
 body.detail .detail-info .center {position: relative;}
-body.detail .detail-info .left {float: left;}
-body.detail .detail-info .big {height: 700px;  position: relative;}
-body.detail .detail-info .big li {position: absolute; display: none;}
-body.detail .detail-info .big li:first-child {display: block;}
+body.detail .detail-info .left {position: relative; float: left; cursor: zoom-in; overflow: hidden;}
+body.detail .detail-info .left .box {position: absolute; top: 0; width: 100px; height: 100px; border: 3px solid red; box-sizing: border-box; display: none;}
+body.detail .detail-info .big {width: 730px; height: 700px;  position: relative;}
+body.detail .detail-info .big li {position: absolute; display: none; width: 730px; height: 700px; }
+
+body.detail .detail-info .big li:nth-child(1) {display: block;  background-image: url(../images/img_detail_01.jpg)}
+body.detail .detail-info .big li:nth-child(2) {background-image: url(../images/img_detail_02.jpg)}
+body.detail .detail-info .big li:nth-child(3) {background-image: url(../images/img_detail_03.jpg)}
+body.detail .detail-info .big li:nth-child(4) {background-image: url(../images/img_detail_04.jpg)}
+
 body.detail .detail-info .right {position: absolute; top: 50px; left: 770px;}
 body.detail .detail-info .right h3 {font-size: 26px; letter-spacing: 2px;}
 body.detail .detail-info .right h3 + div {font-size: 16px; color: #999; padding: 25px 0; letter-spacing: 1px;}
@@ -176,8 +183,13 @@ body.detail .detail-info .right p:nth-of-type(2) span:first-child {margin-left: 
 body.detail .detail-info .right p:nth-of-type(2) span:nth-child(2n) {color: #999;}
 body.detail .detail-info .right p:nth-of-type(3) {font-size: 20px; padding: 30px 0;}
 body.detail .detail-info .right ul {overflow: hidden;}
-body.detail .detail-info .right ul li {float: left; margin-left: 40px;}
-body.detail .detail-info .right ul li:first-child {margin-left: 0 }
+body.detail .detail-info .right .small li {float: left; margin-left: 40px;}
+body.detail .detail-info .right .small li:first-child {margin-left: 0; }
+body.detail .detail-info .right .closeup li {position: absolute; top: 0;  width: 500px; height: 500px; background-position: 0 0; background-repeat: no-repeat; background-color: #eee; display: none; }
+body.detail .detail-info .right .closeup li:nth-child(1) { background-image: url(../images/img_detail_01_b.png); }
+body.detail .detail-info .right .closeup li:nth-child(2) {background-image: url(../images/img_detail_02_b.png);}
+body.detail .detail-info .right .closeup li:nth-child(3) {background-image: url(../images/img_detail_03_b.png);}
+body.detail .detail-info .right .closeup li:nth-child(4) {background-image: url(../images/img_detail_04_b.png);}
 
 body.detail .blue-bg {background-color: #1d2a38; color: #fff;}
 body.detail .details {font-family: "Noto Sans KR"; font-size: 26px; line-height: 1.8;}

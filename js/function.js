@@ -3,15 +3,15 @@ $(function () {
     $('.visual ul').bxSlider({
         auto: true,
         pager: true,
-        touchEnabled : (navigator.maxTouchPoints > 0)
+        touchEnabled: (navigator.maxTouchPoints > 0)
     });
     $('.m-visual ul').bxSlider({
         auto: true,
         pager: true,
-        touchEnabled : (navigator.maxTouchPoints > 0)
+        touchEnabled: (navigator.maxTouchPoints > 0)
     });
     /* 메인페이지 배너 bxslider 종*/
-    
+
     /* */
     $('.collection ul li, .news li, .sns li, .gnb .sub2 li, .gnb .sub3 li').hover(function () {
         $(this).siblings().stop().fadeTo(500, 0.4);
@@ -61,12 +61,16 @@ $(function () {
 
     $('body.detail .detail-info .small li').click(function (e) {
         var j = $(this).index();
+        console.log('j='+j);
         $('.detail-info .big li').css({
             display: 'none'
         });
         $('.detail-info .big li').eq(j).css({
             display: 'block'
         });
+        $('.detail-info .closeup li').eq(j).addClass('on');
+        $('.detail-info .closeup li').eq(j).siblings().removeClass('on');
+        
         $(this).stop().fadeTo(500, 1);
         $(this).siblings().stop().fadeTo(500, 0.4);
         e.preventDefault();
@@ -96,5 +100,35 @@ $(function () {
         }
         $(this).parent().find('ul').stop().slideToggle();
         $(this).toggleClass('on');
+    });
+    ////////////////////////////
+    var sptop = $('.left').offset().top;
+    var spleft = $('.left').offset().left;
+    $(window).resize(function () {
+        sptop = $('.left').offset().top;
+        spleft = $('.left').offset().left;
+    });
+
+    $('.left').mousemove(function (e) {
+        var boxX = e.pageX - spleft;
+        var boxY = e.pageY - sptop;
+        $(this).find('.box').css({
+            top: boxY - 50,
+            left: boxX - 50
+        });
+        $('.closeup li').css({
+            'background-position': boxX * (-0.783) + 'px ' + boxY * (-1.094) + 'px'
+            //0.783= (1072px - 500px) / 730px
+            //1.094= (1266px - 500px) / 700px
+        });
+    });
+    $('.left').hover(function () {
+        $('.box, .closeup li.on').stop().animate({
+            opacity: 'show'
+        }, 200);
+    }, function () {
+        $('.box, .closeup li').stop().animate({
+            opacity: 'hide'
+        }, 200);
     });
 });
