@@ -21,7 +21,7 @@ header select~fieldset {position: absolute; top: 20px; right: 0;border-bottom: 1
 header select~fieldset input {background-color: transparent; color: #fff; height: 26px; font-family: "Noto Sans KR"; letter-spacing: 1px; font-size: 16px;}
 header .gnb {height: 50px; text-align: center; background-color: #eee;}
 header .gnb::after {display: block; content: ""; clear: both;}
-header .gnb>ul {position: relative; padding-left: 140px; box-sizing: border-box; font-family: "Nexa Light";}
+header .gnb>ul {position: relative; padding-left: 140px; box-sizing: border-box; font-family: "Nexa";}
 header .gnb>ul>li {float: left; width: 150px; font-size: 20px; font-weight: bold; padding: 13px 25px; }
 header .gnb > ul > li > a::after {display: block; content: ""; width: 0px; height: 3px; background: #000; margin: 10px auto -15px; transition: all 0.5s;}
 header .gnb > ul > li:hover > a::after {width: 100%;}
